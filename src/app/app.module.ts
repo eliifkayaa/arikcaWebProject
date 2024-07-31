@@ -11,6 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { PhotosComponent } from './components/photos/photos.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SliderComponent } from './components/home/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
     PhotosComponent,
     ContactComponent,
     FooterComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,

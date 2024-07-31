@@ -10,20 +10,20 @@ $background-color_1: #ffffff;
 $background-color_2: rgba(255, 255, 255, 0.9);
 $background-color_3: #2b3b95;
 
-&:after {
-	width: 1200px;
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
-}
-&:before {
-	width: 1200px;
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
-}
+// &:after {
+// 	width: 1200px;
+// 	padding-right: 15px;
+// 	padding-left: 15px;
+// 	margin-right: auto;
+// 	margin-left: auto;
+// }
+// &:before {
+// 	width: 1200px;
+// 	padding-right: 15px;
+// 	padding-left: 15px;
+// 	margin-right: auto;
+// 	margin-left: auto;
+// }
 .container {
 	width: 1200px;
 	padding-right: 15px;
