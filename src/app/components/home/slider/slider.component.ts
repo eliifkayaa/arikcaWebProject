@@ -1,15 +1,14 @@
-import { Component, AfterViewInit , Inject, PLATFORM_ID } from '@angular/core';
+import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { SwiperOptions } from 'swiper/types';
 import Swiper from 'swiper';
-
 import { Navigation, Pagination } from 'swiper/modules';
 
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import  $ from 'jquery';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-slider',
@@ -17,11 +16,11 @@ import  $ from 'jquery';
   styleUrl: './slider.component.scss'
 })
 export class SliderComponent implements AfterViewInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      // HERO SLIDER
+
       const menu: string[] = [];
       $('.swiper-slide').each((index: number, element: HTMLElement) => {
         menu.push($(element).find('.slide-inner').attr('data-text') as string);
@@ -72,11 +71,10 @@ export class SliderComponent implements AfterViewInit {
 
       const swiper = new Swiper('.swiper-container', swiperOptions);
 
-      // DATA BACKGROUND IMAGE
       const sliderBgSetting = $('.slide-bg-image');
       sliderBgSetting.each((indx: number, element: HTMLElement) => {
         if ($(element).attr('data-background')) {
-          $(element).css('background-image', `url(${ $(element).data('background') })`);
+          $(element).css('background-image', `url(${$(element).data('background')})`);
         }
       });
     }
