@@ -13,6 +13,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SliderComponent } from './components/home/home-components/slider/slider.component';
 import { CorporateComponent } from './components/home/home-components/corporate/corporate.component';
+import { HomeServicesComponent } from './components/home/home-components/home-services/home-services.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CorporateComponent } from './components/home/home-components/corporate/
     ContactComponent,
     FooterComponent,
     SliderComponent,
-    CorporateComponent
+    CorporateComponent,
+    HomeServicesComponent
   ],
   imports: [
     BrowserModule,
