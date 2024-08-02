@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, AfterViewInit, Renderer2, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { SwiperOptions } from 'swiper/types';
 import Swiper from 'swiper';
@@ -19,6 +19,7 @@ export class SliderComponent implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngAfterViewInit() {
+
     if (isPlatformBrowser(this.platformId)) {
 
       const menu: string[] = [];
@@ -31,6 +32,8 @@ export class SliderComponent implements AfterViewInit {
         loop: true,
         speed: 1000,
         parallax: true,
+        initialSlide: 2,
+
         autoplay: {
           delay: 6500,
           disableOnInteraction: false,
@@ -69,7 +72,7 @@ export class SliderComponent implements AfterViewInit {
         }
       };
 
-      const swiper = new Swiper('.swiper-container', swiperOptions);
+      const swiper = new Swiper('.swiper-container', swiperOptions)
 
       const sliderBgSetting = $('.slide-bg-image');
       sliderBgSetting.each((indx: number, element: HTMLElement) => {

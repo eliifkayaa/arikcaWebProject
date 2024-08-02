@@ -59,6 +59,7 @@ a {
   background-color: $navbar-body-color;
   padding: $navbar-padding-y $navbar-padding-x;
   border-bottom: 1px solid $border-color;
+  height: 80px;
 
   .container {
     @media (min-width: 576px) {
@@ -78,7 +79,9 @@ a {
   .navbar-header {
     display: flex;
     align-items: center;
-
+    float: left;
+    justify-content: center;
+    height: 50px;
     @media (max-width: 768px) {
       width: 100%;
       display: flex;
@@ -117,6 +120,8 @@ a {
     align-items: center;
     flex-basis: auto;
     flex-grow: 1;
+    justify-content: center;
+    float: left;
 
     @media (max-width: 768px) {
       display: none;

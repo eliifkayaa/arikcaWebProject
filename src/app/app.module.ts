@@ -11,7 +11,8 @@ import { AboutComponent } from './components/about/about.component';
 import { PhotosComponent } from './components/photos/photos.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SliderComponent } from './components/home/slider/slider.component';
+import { SliderComponent } from './components/home/home-components/slider/slider.component';
+import { CorporateComponent } from './components/home/home-components/corporate/corporate.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SliderComponent } from './components/home/slider/slider.component';
     PhotosComponent,
     ContactComponent,
     FooterComponent,
-    SliderComponent
+    SliderComponent,
+    CorporateComponent
   ],
   imports: [
     BrowserModule,
