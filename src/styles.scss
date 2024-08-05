@@ -3,6 +3,13 @@
 
 @import url("https://fonts.googleapis.com/css?family=Rajdhani&display=swap");
 
+$font-family: "Poppins", sans-serif;
+$font-size-base: 0.925rem;
+$base-color: rgb(197, 167, 102);
+$text-dark: #3c4250;
+$border-color: #eceef3;
+
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +18,7 @@
 
 body {
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: $font-family;
   background: #f3f3f3;
 }
 

@@ -15,12 +15,9 @@
 
       <div class="navbar-menu" id="open-navbar1">
         <ul class="navbar-nav">
-          <li class="active"><a routerLink="">Anasayfa</a></li>
-          <li><a routerLink="/about">Hakkımızda</a></li>
-          <li><a routerLink="/project">Projeler</a></li>
-          <li><a routerLink="/services">Hizmetler</a></li>
-          <li><a routerLink="/photos">Galeri</a></li>
-          <li><a routerLink="/contact">İletişim</a></li>
+          <li *ngFor="let link of navLinks" routerLinkActive="active" (isActiveChange)="onRouterLinkActive($event, link.label)">
+            <a [routerLink]="link.url">{{link.label}}</a>
+          </li>
         </ul>
       </div>
     </div>
