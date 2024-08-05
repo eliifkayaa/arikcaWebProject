@@ -82,6 +82,7 @@ a {
     float: left;
     justify-content: center;
     height: 50px;
+    
     @media (max-width: 768px) {
       width: 100%;
       display: flex;
