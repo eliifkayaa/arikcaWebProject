@@ -8,66 +8,45 @@
   }
 
   .main {
-      background-image: url("https://senelmuhendislik.com/wp-content/uploads/2019/01/foto1.png");
-      opacity: 0.3;
+    background-image: url("https://senelmuhendislik.com/wp-content/uploads/2019/01/foto1.png");
+    opacity: 0.1;
   }
 
   .card {
-      position: absolute;
-      top: 70%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: grid;
-      grid-template-columns: 550px auto auto;
-      gap: 50px;
-      height: 450px;
-      width: 1000px;
-      border-radius: 30px;
-      background-color: #fff;
-      -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
-      box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
-      z-index: 2;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 550px auto auto;
+    // gap: 100px;
+    height: 450px;
+    width: 100%;
+    border: none;
+    background-color: transparent;
 
-      .thumbnail {
-          position: relative;
-          grid-column-start: 1;
-          grid-column-end: 1;
-          top: 60px;
-          left: 35px;
-          height: 320px;
-          width: 530px;
-          -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
-          border-radius: 30px;
-          overflow: hidden;
+    .left {
+      float: left;
 
-          img.left {
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              height: auto;
-              width: 100%;
-              -webkit-transform: translate(-50%, -50%);
-              -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-          }
+      h1 {
+        color: #241c14;
       }
 
+      p {
+        float: left;
+        text-align: justify;
+        padding-top: 10px;
+        line-height: 150%;
+        color: #241c14;
+      }
+    }
+
+    .right-img {
+        
       .right {
-          padding: 20px;
-
-          h1 {
-              color: #4b4b4b;
-          }
-
-          p {
-              text-align: justify;
-              padding-top: 10px;
-              line-height: 150%;
-              color: #4b4b4b;
-          }
+        float: right;
+        position: relative;
       }
+    }
   }
 }
