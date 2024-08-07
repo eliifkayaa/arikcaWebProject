@@ -15,6 +15,10 @@ import { SliderComponent } from './components/home/home-components/slider/slider
 import { CorporateComponent } from './components/home/home-components/corporate/corporate.component';
 import { HomeServicesComponent } from './components/home/home-components/home-services/home-services.component';
 import { RouterModule } from '@angular/router';
+import { HomeProjectsComponent } from './components/home/home-components/home-projects/home-projects.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -29,16 +33,20 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     SliderComponent,
     CorporateComponent,
-    HomeServicesComponent
+    HomeServicesComponent,
+    HomeProjectsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     // RouterModule.forRoot("")
+    MatButtonModule,
+    MatCardModule
 
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

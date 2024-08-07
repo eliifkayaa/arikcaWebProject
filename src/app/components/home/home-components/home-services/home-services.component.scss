@@ -1,96 +1,48 @@
-$highlight: #5bc0eb;
-$darkhighlight: #fde74c;
-
 .container {
-  padding: 100px;
+  //padding: 100px;
 
   h1 {
     text-align: center;
     font-size: 2.5rem;
+    padding: 40px;
+    color: white;
   }
+}
 
-  .card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-    gap: 30px;
+.card-container {
+  cursor: pointer;
+  padding: 0px 100px 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 
-    .card {
-      font-weight: bold;
-      position: relative;
-      width: 33.3%;
-      border-radius: 30px;
+  .card {
+    height: 550px;
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #f9f6f1;
+
+    &:hover {
+      border: 2px solid royalblue;
+    }
+
+    img {
+      transition: transform 0.5s;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      transition: all 0.3s ease;
 
       &:hover {
-        border: 2px dashed rgb(197, 167, 102);
+        transform: scale(1.1);
       }
+    }
 
-      a {
-        padding: 20px;
-        width: 100%;
-        height: 350px;
-        border: 2px solid black;
-        background: white;
-        text-decoration: none;
-        color: black;
-        display: block;
-        transition: 0.25s ease;
-        border-radius: 30px;
-
-        &:hover {
-          transform: translate(-30px, -30px);
-          border-color: rgb(197, 167, 102);
-
-          .card--display {
-            display: none;
-          }
-
-          .card--hover {
-            display: block;
-          }
-        }
-
-        .card--display {
-          img {
-            width: 100%;
-            object-fit: cover;
-            display: block;
-            border-radius: 20px;
-          }
-
-          i {
-            // font-size: 60px;
-            // margin-top: 200px;
-          }
-
-          h5 {
-            // margin: 20px 0 0;
-            color:rgb(197, 167, 102);
-            padding-top: 20px;
-            text-align: center;
-          }
-        }
-
-        .card--hover {
-          display: none;
-
-          h2 {
-            margin: 20px 0;
-          }
-
-          p {
-            font-weight: normal;
-            line-height: 1.5;
-
-            &.link {
-              // margin: 20px 0 0;
-              // font-weight: bold;
-              // color: rgb(197, 167, 102);
-            }
-          }
-        }
-      }
+    .content {
+      padding: 20px;
     }
   }
 }

@@ -1,21 +1,29 @@
 <div class="container">
     <h1>HİZMETLERİMİZ</h1>
-    <div class="card-container">
-        @for (service of services; track $index) {
-        <div class="card">
-            <a routerLink="/project">
-                <div class="card--display">
-                    <img [src]="service.icon" width="200px" height="200px" alt="Resim">
-                    <i class="material-icons"></i>
-                    <h5>{{service.title}}</h5>
-                </div>
-                <div class="card--hover">
-                    <h2>{{service.title}}</h2>
-                    <p>{{service.description}}</p>
-                    <p class="link theme-btn-s2" routerLink="/project" >Proje Detayları</p>
-                </div>
-            </a>
-        </div>
-        }
-    </div>
+
 </div>
+
+<div class="card-container">
+    @for (service of services; track $index) {
+    <mat-card class="card" appearance="outlined" routerLink="/services">
+        <img mat-card-image [src]="service.icon" alt="Photo of a Shiba Inu">
+        <mat-card-content class="content">
+            <h5>{{service.title}}</h5>
+            <p>
+                {{service.description}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button routerLink="/services" mat-button>Detaylar</button>
+        </mat-card-actions>
+    </mat-card>
+    }
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
