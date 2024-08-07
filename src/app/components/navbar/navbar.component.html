@@ -15,10 +15,10 @@
 
       <div class="navbar-menu" id="open-navbar1">
         <ul class="navbar-nav">
-          <li *ngFor="let link of navLinks" routerLinkActive="active" (isActiveChange)="onRouterLinkActive($event, link.label)">
-            <a [routerLink]="link.url">{{link.label}}</a>
-          </li>
+            <li *ngFor="let link of navLinks" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active" (isActiveChange)="onRouterLinkActive($event, link.label)">
+                <a [routerLink]="link.url">{{link.label}}</a>
+            </li>
         </ul>
-      </div>
+    </div>
     </div>
   </nav>
