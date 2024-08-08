@@ -1,0 +1,43 @@
+.container {
+    padding-top: 80px;
+
+    .card {
+        display: flex;
+        text-align: center;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 80px;
+        gap: 200px;
+        border: none;
+        background-image: url(/assets/pexels-hngstrm-1939485.jpg);
+        background-repeat: no-repeat;
+        background-color: rgb(232, 210, 193);
+        background-repeat: round;
+        background-size: cover;
+        background-blend-mode: screen;
+        border-radius: 20px;
+
+        box-shadow: rgba(176, 176, 197, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+        
+
+        i {
+            text-align: center;
+            font-size: 70px;
+            color: rgb(197, 167, 102);
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            color: black;
+        }
+
+        h3 {
+            font-size: large;
+        }
+
+
+    }

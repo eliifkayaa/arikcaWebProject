@@ -6,56 +6,83 @@ import Swiper from 'swiper';
   templateUrl: './home-projects.component.html',
   styleUrl: './home-projects.component.scss'
 })
-export class HomeProjectsComponent  implements AfterViewInit {
+export class HomeProjectsComponent implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
   ngAfterViewInit(): void {
 
     if (isPlatformBrowser(this.platformId)) {
-          
-   const swiper = new Swiper(".mySwiper", {
-    slidesPerView:3,
-    spaceBetween: 10,
-    freeMode: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    }
-  })
 
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        watchSlidesProgress: true,
+        loop: true,
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 4,
+          }
+        }
+      })
     }
-
   }
 
   services = [
     {
+      icon: '/assets/proje5.jpeg',
+      title: 'İrem Apartmanı'
+    },
+    {
+      icon: '/assets/proje6.jpg',
+      title: 'İrem Residence'
+    },
+    {
+      icon: '/assets/harman.jpeg',
+      title: 'İrem Apartmanı'
+    },
+    {
       icon: '/assets/1.png',
-      title: 'Kentsel Dönüşüm Uygulamları',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo euismod, lobortis lectus non, tincidunt neque.'
+      title: 'İrem Residence'
     },
     {
       icon: '/assets/2.jpg',
-      title: 'Kat Karşılığı İnşaat Projeleri',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo euismod, lobortis lectus non, tincidunt neque.'
-    },
-    {
-      icon: '/assets/3.jpg',
-      title: 'Mimarlık Hizmetleri',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo euismod, lobortis lectus non, tincidunt neque.'
+      title: 'İrem Apartmanı'
     },
     {
       icon: '/assets/1.png',
-      title: 'Konut Binaları',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo euismod, lobortis lectus non, tincidunt neque.'
+      title: 'Arıkca Residence'
     },
     {
       icon: '/assets/3.jpg',
-      title: 'İrem Apartmanı',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo euismod, lobortis lectus non, tincidunt neque.'
+      title: 'İrem Apartmanı'
+    },
+    {
+      icon: '/assets/proje2.jpg',
+      title: 'Arıkca Residence'
+    },
+    {
+      icon: '/assets/proje5.jpeg',
+      title: 'İrem Apartmanı'
+    },
+    {
+      icon: '/assets/proje6.jpg',
+      title: 'İrem Residence'
+    },
+    {
+      icon: '/assets/harman.jpeg',
+      title: 'İrem Apartmanı'
     },
     {
       icon: '/assets/1.png',
-      title: 'İrem Residence',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo euismod, lobortis lectus non, tincidunt neque.'
+      title: 'İrem Residence'
     }
   ]
-  }
+}

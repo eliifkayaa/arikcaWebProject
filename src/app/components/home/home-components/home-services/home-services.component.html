@@ -1,12 +1,19 @@
 <div class="container">
-    <h1>HİZMETLERİMİZ</h1>
+    <div class="container-text">
+        <h1>Hizmet Alanlarımız</h1>
+
+        <mat-card-actions>
+            <p>Projelerinizde uzman ekibimizle hizmetinizdeyiz. İnşaat, tadilat, restorasyon ve peyzajda çözüm ortağınız olmaktan mutluluk duyarız.</p>
+            <button routerLink="/services" class="theme-btn-s2" >Tümünü Gör</button>
+        </mat-card-actions>
+    </div>
 
 </div>
 
 <div class="card-container">
     @for (service of services; track $index) {
     <mat-card class="card" appearance="outlined" routerLink="/services">
-        <img mat-card-image [src]="service.icon" alt="Photo of a Shiba Inu">
+        <img mat-card-image [src]="service.icon" alt="No Image">
         <mat-card-content class="content">
             <h5>{{service.title}}</h5>
             <p>
@@ -14,16 +21,12 @@
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button routerLink="/services" mat-button>Detaylar</button>
+            <button routerLink="/services" class="theme-btn-s2" >Detaylar
+                <i class="fa-solid fa-right-long"></i>      
+            </button>
         </mat-card-actions>
     </mat-card>
     }
 
 </div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>

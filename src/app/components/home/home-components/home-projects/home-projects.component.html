@@ -1,50 +1,17 @@
-<div class="container">
-    <h1>HİZMETLERİMİZ</h1>
-    <!-- <div class="card-container">
-        @for (service of services; track $index) {
-        <div class="card">
-            <a routerLink="/project">
-                <div class="card--display">
-                    <img [src]="service.icon" width="200px" height="200px" alt="Resim">
-                    <i class="material-icons"></i>
-                    <h5>{{service.title}}</h5>
-                </div>
-                <div class="card--hover">
-                    <h2>{{service.title}}</h2>
-                    <p>{{service.description}}</p>
-                    <p class="link theme-btn-s2" routerLink="/project" >Proje Detayları</p>
-                </div>
-            </a>
-        </div>
-        }
-    </div> -->
 
+    <h1>Projelerimiz</h1>
     <div class="card-container">
         <div class="swiper mySwiper">
-
             <div class="swiper-wrapper">
                 @for (service of services; track $index) {
-                <div class="swiper-slide card">
-                    <a routerLink="/project">
-                        <div class="card--display">
-                            <img [src]="service.icon" width="200px" height="200px" alt="Resim">
-                            <i class="material-icons"></i>
-                            <h5>{{service.title}}</h5>
-                        </div>
-                        <div class="card--hover">
-                            <h2>{{service.title}}</h2>
-                            <p>{{service.description}}</p>
-                            <p class="link theme-btn-s2" routerLink="/project">Proje Detayları</p>
-                        </div>
-                    </a>
-                </div>
+                <a class="swiper-slide card" routerLink="/project">
+                    <div class="card--display">
+                        <img [src]="service.icon" width="200px" height="200px" alt="Resim">
+                        <h5>{{service.title}}</h5>
+                    </div>
+                </a>
                 }
             </div>
             <div class="swiper-pagination"></div>
-
         </div>
-
     </div>
-
-
-</div>

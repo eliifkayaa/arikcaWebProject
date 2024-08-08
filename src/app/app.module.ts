@@ -19,6 +19,7 @@ import { HomeProjectsComponent } from './components/home/home-components/home-pr
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { HomeBannerComponent } from './components/home/home-components/home-banner/home-banner.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     SliderComponent,
     CorporateComponent,
     HomeServicesComponent,
-    HomeProjectsComponent
+    HomeProjectsComponent,
+    HomeBannerComponent
   ],
   imports: [
     BrowserModule,

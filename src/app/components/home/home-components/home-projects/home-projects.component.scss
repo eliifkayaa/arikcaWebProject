@@ -1,94 +1,68 @@
-$highlight: #5bc0eb;
-$darkhighlight: #fde74c;
 
-.container {
-  padding: 100px;
+  // padding: 50px;
+  // width: 100%;
 
   h1 {
     text-align: center;
     font-size: 2.5rem;
-    padding: 40px;
-    color: white;
+    padding: 50px;
   }
 
   .card-container {
+    width: 100%;
+
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
 
     .card {
       font-weight: bold;
       position: relative;
       width: 33.3%;
-      border-radius: 30px;
+      height: 300px;
+      border-radius: 0px;
+      overflow: hidden;
+      border: none;
 
-      &:hover {
-        // border: 2px dashed rgb(197, 167, 102);
-      }
-
-      a {
-        padding: 20px;
+      .card--display {
         width: 100%;
-        height: 350px;
-        border: 2px solid black;
-        background: white;
-        text-decoration: none;
-        // transition: transform .2s;
-        color: black;
-        display: block;
-        transition: 0.25s ease;
-        border-radius: 30px;
+        height: 100%;
+        position: relative;
 
-        &:hover {
-          transform: scale(0.8);
-          border-color: rgb(197, 167, 102);
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 0.3s ease;
 
-          .card--display {
-            display: none;
-          }
-
-          .card--hover {
-            display: block;
+          &:hover {
+            transform: scale(1.1);
           }
         }
-
-        .card--display {
-          img {
-            width: 100%;
-            object-fit: cover;
-            display: block;
-            border-radius: 20px;
-          }
-
-          i {
-            // font-size: 60px;
-            // margin-top: 200px;
-          }
-
-          h5 {
-            // margin: 20px 0 0;
-            color:rgb(197, 167, 102);
-            padding-top: 20px;
-            text-align: center;
-          }
-        }
-
-        .card--hover {
-          display: none;
-
-          h2 {
-            margin: 20px 0;
-          }
-
-          p {
-            font-weight: normal;
-            line-height: 1.5;
-
-            &.link {
-              // margin: 20px 0 0;
-              // font-weight: bold;
-              // color: rgb(197, 167, 102);
-            }
-          }
+        h5 {
+          position: absolute; /* Konumu absolute yapıyoruz */
+          bottom: 0; /* Alt kısmına yerleştiriyoruz */
+          width: 100%;
+          text-align: center;
+          background: rgba(0, 0, 0, 0.5); /* Yarı saydam bir arka plan ekliyoruz */
+          color: white; /* Yazı rengini beyaz yapıyoruz */
+          padding: 10px;
+          margin: 0; /* Varsayılan marjinleri sıfırlıyoruz */
         }
       }
     }
   }
-}
+

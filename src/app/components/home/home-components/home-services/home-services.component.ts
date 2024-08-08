@@ -25,29 +25,24 @@ export class HomeServicesComponent implements AfterViewInit {
   })
 
     }
-
   }
 
   services = [
     {
       icon: '/assets/1.png',
       title: 'Kentsel Dönüşüm Uygulamları',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo euismod, lobortis lectus non, tincidunt neque.'
+      description: 'Kentsel dönüşüm, mahalleleri dönüştürmek, altyapıyı geliştirmek ve genel yaşam kalitesini artırmak için ...'
     },
     {
       icon: '/assets/2.jpg',
       title: 'Kat Karşılığı İnşaat Projeleri',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo euismod, lobortis lectus non, tincidunt neque.'
+      description: 'Kat karşılığı inşaat projeleri, müteahhitler ve arsa sahipleri arasında yapılan anlaşmalar çerçevesinde ...'
     },
-    {
-      icon: '/assets/3.jpg',
-      title: 'Mimarlık Hizmetleri',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo euismod, lobortis lectus non, tincidunt neque.'
-    },
+
     {
       icon: '/assets/1.png',
       title: 'Konut Binaları',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo euismod, lobortis lectus non, tincidunt neque.'
+      description: 'Konut binaları, insanların barınma ihtiyaçlarını karşılamak için hayati öneme sahiptir. Günümüzde, artan ...'
     }
   ]
   }
