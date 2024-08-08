@@ -1,0 +1,94 @@
+.footer {
+  padding: 10px;
+
+  .footer-left {
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    color: #fff;
+
+    h2 {
+      color: rgb(232, 210, 193);
+    }
+
+    .contact {
+      a,
+      i,
+      .icon {
+        display: flex;
+        gap: 10px;
+        color: black;
+        cursor: pointer;
+        color: #fff;
+
+        &:hover {
+          color: rgb(232, 210, 193);
+        }
+      }
+    }
+
+    .menu {
+      padding: 20px 20px 0px;
+
+      h5 {
+        color: rgb(232, 210, 193);
+      }
+
+      a {
+        font-size: 1rem;
+
+        &:hover {
+          color: rgb(232, 210, 193);
+        }
+      }
+    }
+  }
+
+  .footer-right {
+    float: right;
+    width: 50%;
+    height: 100%;
+
+    .maps {
+      display: inline;
+      justify-content: flex-end;
+    }
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+    color: #adb5bd;
+
+    p {
+      padding-left: 20px;
+      width: 80%;
+      white-space: nowrap;
+      //   color: rgb(255, 255, 255), 0.8;
+    }
+
+    .social-media {
+      display: flex;
+      float: left;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+
+      i {
+        font-size: 1rem;
+        color: #fff;
+        padding: 10px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: rgb(232, 210, 193);
+        }
+      }
+    }
+  }
+}
