@@ -33,11 +33,10 @@ export class SliderComponent implements AfterViewInit {
         speed: 1000,
         parallax: true,
         initialSlide: 2,
-
-        // autoplay: {
-        //   delay: 6500,
-        //   disableOnInteraction: false,
-        // },
+        autoplay: {
+          delay: 6500,
+          disableOnInteraction: false,
+        },
         watchSlidesProgress: true,
         pagination: {
           el: '.swiper-pagination',
