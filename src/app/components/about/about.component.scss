@@ -1,0 +1,54 @@
+.corporate {
+    margin: 100px;
+    position: relative;
+    border-radius: 30px;
+  
+    h1 {
+      text-align: center;
+    }
+  
+    .main {
+      background-image: url("https://senelmuhendislik.com/wp-content/uploads/2019/01/foto1.png");
+      opacity: 0.1;
+    }
+  
+    .card {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: grid;
+      grid-template-columns: 550px auto auto;
+      // gap: 100px;
+      height: 450px;
+      width: 100%;
+      border: none;
+      background-color: transparent;
+  
+      .left {
+        float: left;
+  
+        h1 {
+          color: #241c14;
+        }
+  
+        p {
+          float: left;
+          text-align: justify;
+          padding-top: 10px;
+          line-height: 150%;
+          color: #241c14;
+        }
+      }
+  
+      .right-img {
+          
+        .right {
+          float: right;
+          position: relative;
+        }
+      }
+    }
+  }
+  
+  

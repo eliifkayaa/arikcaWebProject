@@ -20,6 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HomeBannerComponent } from './components/home/home-components/home-banner/home-banner.component';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { BreadCrumbComponent } from './components/bread-crumb/bread-crumb.component';
 
 @NgModule({
   declarations: [
@@ -36,15 +38,16 @@ import { HomeBannerComponent } from './components/home/home-components/home-bann
     CorporateComponent,
     HomeServicesComponent,
     HomeProjectsComponent,
-    HomeBannerComponent
+    HomeBannerComponent,
+    BreadCrumbComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     // RouterModule.forRoot("")
     MatButtonModule,
-    MatCardModule
-
+    MatCardModule,
+    BreadcrumbModule
   ],
   providers: [
     provideClientHydration(),
