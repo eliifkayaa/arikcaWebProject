@@ -1,5 +1,25 @@
 
 <app-navbar></app-navbar>
-<span>İçerik buraya gelecek</span>
-<br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="card-container">
+    @for (service of services; track $index) {
+    <mat-card class="card" appearance="outlined" routerLink="/services">
+        <img mat-card-image [src]="service.icon" alt="No Image">
+        <mat-card-content class="content">
+            <h5>{{service.title}}</h5>
+            <p>
+                {{service.description}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button routerLink="/services" class="theme-btn-s2" >Detaylar
+                <i class="fa-solid fa-right-long"></i>      
+            </button>
+        </mat-card-actions>
+    </mat-card>
+    }
+
+</div>
+<br>
+
 <app-footer></app-footer>

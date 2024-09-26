@@ -22,6 +22,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HomeBannerComponent } from './components/home/home-components/home-banner/home-banner.component';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { BreadCrumbComponent } from './components/bread-crumb/bread-crumb.component';
+import { ProjectDetailsComponent } from './components/project/component/project-details/project-details.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { BreadCrumbComponent } from './components/bread-crumb/bread-crumb.compon
     HomeServicesComponent,
     HomeProjectsComponent,
     HomeBannerComponent,
-    BreadCrumbComponent
+    BreadCrumbComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule,

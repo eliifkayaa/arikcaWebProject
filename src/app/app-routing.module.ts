@@ -6,12 +6,14 @@ import { ContactComponent } from './components/contact/contact.component';
 import { PhotosComponent } from './components/photos/photos.component';
 import { ProjectComponent } from './components/project/project.component';
 import { ServicesComponent } from './components/services/services.component';
+import { ProjectDetailsComponent } from './components/project/component/project-details/project-details.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "about", component: AboutComponent },
   { path: "photos", component: PhotosComponent },
   { path: "project", component: ProjectComponent },
+  { path: "project/:id", component: ProjectDetailsComponent },
   { path: "services", component: ServicesComponent },
   { path: "contact", component: ContactComponent},
 ];
