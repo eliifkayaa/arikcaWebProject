@@ -1,0 +1,33 @@
+.container {
+    padding-top: 80px;
+
+    h2 {
+        text-align: center;
+    }
+
+    .card {
+        display: flex;
+        text-align: center;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: #f9f6f1;
+        border-radius: 20px;
+        //box-shadow: rgba(176, 176, 197, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    i {
+        text-align: center;
+        font-size: 40px;
+        color: rgb(197, 167, 102);
+        padding: 20px;
+    }
+
+    h3 {
+        font-size: large;
+    }
+
+
+}
