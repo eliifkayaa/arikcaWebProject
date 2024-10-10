@@ -38,51 +38,51 @@ export class HomeProjectsComponent implements AfterViewInit {
   services = [
     {
       icon: '/assets/proje5.jpeg',
-      title: 'İrem Apartmanı'
+      title: 'Mevsim Sitesi'
     },
     {
       icon: '/assets/proje6.jpg',
-      title: 'İrem Residence'
+      title: 'Besmele Apartmanı'
     },
     {
       icon: '/assets/harman.jpeg',
-      title: 'İrem Apartmanı'
+      title: 'Pınar Apartmanı'
     },
     {
       icon: '/assets/1.png',
-      title: 'İrem Residence'
+      title: 'İrem Park'
     },
     {
       icon: '/assets/2.jpg',
-      title: 'İrem Apartmanı'
+      title: 'Ilıca Yaşam Park'
     },
-    {
-      icon: '/assets/1.png',
-      title: 'Arıkca Residence'
-    },
-    {
-      icon: '/assets/3.jpg',
-      title: 'İrem Apartmanı'
-    },
-    {
-      icon: '/assets/proje2.jpg',
-      title: 'Arıkca Residence'
-    },
-    {
-      icon: '/assets/proje5.jpeg',
-      title: 'İrem Apartmanı'
-    },
-    {
-      icon: '/assets/proje6.jpg',
-      title: 'İrem Residence'
-    },
-    {
-      icon: '/assets/harman.jpeg',
-      title: 'İrem Apartmanı'
-    },
-    {
-      icon: '/assets/1.png',
-      title: 'İrem Residence'
-    }
+    // {
+    //   icon: '/assets/1.png',
+    //   title: 'Arıkca Residence'
+    // },
+    // {
+    //   icon: '/assets/3.jpg',
+    //   title: 'İrem Apartmanı'
+    // },
+    // {
+    //   icon: '/assets/proje2.jpg',
+    //   title: 'Arıkca Residence'
+    // },
+    // {
+    //   icon: '/assets/proje5.jpeg',
+    //   title: 'İrem Apartmanı'
+    // },
+    // {
+    //   icon: '/assets/proje6.jpg',
+    //   title: 'İrem Residence'
+    // },
+    // {
+    //   icon: '/assets/harman.jpeg',
+    //   title: 'İrem Apartmanı'
+    // },
+    // {
+    //   icon: '/assets/1.png',
+    //   title: 'İrem Residence'
+    // }
   ]
 }

@@ -32,22 +32,36 @@ export class ProjectComponent implements AfterViewInit {
   services = [
     {
       icon: '/assets/1.png',
-      title: 'Altın Kent Evleri',
+      title: 'Mevsim Sitesi',
       description:
         'Kentsel dönüşüm, mahalleleri dönüştürmek, altyapıyı geliştirmek ve genel yaşam kalitesini artırmak için ...',
     },
     {
       icon: '/assets/2.jpg',
-      title: 'Yeşil Çam Sitesi',
+      title: 'Besmele Apartmanı',
       description:
         'Kat karşılığı inşaat projeleri, müteahhitler ve arsa sahipleri arasında yapılan anlaşmalar çerçevesinde ...',
     },
 
     {
       icon: '/assets/1.png',
-      title: 'Arıkca Siteleri',
+      title: 'Pınar Apartmanı',
       description:
         'Konut binaları, insanların barınma ihtiyaçlarını karşılamak için hayati öneme sahiptir. Günümüzde, artan ...',
+    },
+
+    {
+      icon: '/assets/1.png',
+      title: 'İrem Park',
+      description:
+      'Konut binaları, insanların barınma ihtiyaçlarını karşılamak için hayati öneme sahiptir. Günümüzde, artan ...',
+    },
+
+    {
+      icon: '/assets/2.jpg',
+      title: 'Ilıca Yaşam Park',
+      description:
+      'Konut binaları, insanların barınma ihtiyaçlarını karşılamak için hayati öneme sahiptir. Günümüzde, artan ...',
     },
   ];
 }
