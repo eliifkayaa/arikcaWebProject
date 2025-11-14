@@ -1,233 +1,291 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// Color Variables
+$primary-dark: #1a1d29;
+$secondary-dark: #252836;
+$accent-gold: #d4a574;
+$accent-gold-light: #e8d2c1;
+$text-light: #ffffff;
+$text-gray: #a0a0a0;
+$border-dark: #3a3d4a;
 
-$font-family: "Poppins", sans-serif;
-$font-size-base: 0.925rem;
-$base-color: rgb(197, 167, 102);
-$text-dark: #3c4250;
-$border-color: #eceef3;
+// Top Bar Styles
+.top-bar {
+  background: $primary-dark;
+  border-bottom: 1px solid $border-dark;
+  padding: 8px 0;
+  font-size: 12px;
 
-$navbar-body-color: #fff;
-$navbar-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-$navbar-padding-y: 1rem;
-$navbar-padding-x: 1.15rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
-$navbar-link-hover: $base-color;
-$navbar-link-padding-y: 0.5rem;
-$navbar-link-padding-x: 1rem;
+  .top-bar-left {
+    .top-text {
+      color: $text-gray;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
 
-$navbar-dropdown-padding-y: 0.5rem;
-$navbar-dropdown-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-$navbar-dropdown-radius: 0.75rem;
+  .top-bar-right {
+    .phone-number {
+      color: $accent-gold;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.3s ease;
 
-$navbar-dropdown-item-padding-y: 0.25rem;
-$navbar-dropdown-item-padding-x: 1rem;
+      i {
+        margin-right: 6px;
+        font-size: 13px;
+      }
 
-$navbar-dropdown-separator-margin-y: 9px;
-$navbar-dropdown-separator-color: $border-color;
-
-a {
-  text-decoration: none;
+      &:hover {
+        color: $accent-gold-light;
+      }
+    }
+  }
 }
 
 .container {
-  width: 1170px;
+  max-width: 1200px;
   position: relative;
-  margin: {
-    left: auto;
-    right: auto;
-  }
-  padding: {
-    left: 15px;
-    right: 15px;
-  }
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.navbar,
-.navbar > .container {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  @media (max-width: 768px) {
-    display: block;
-  }
-}
-
+// Main Navbar
 .navbar {
-  box-shadow: $navbar-shadow;
-  background-color: $navbar-body-color;
-  padding: $navbar-padding-y $navbar-padding-x;
-  border-bottom: 1px solid $border-color;
-  height: 80px;
+  background: $secondary-dark;
+  border-bottom: 2px solid $border-dark;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 
   .container {
-    @media (min-width: 576px) {
-      max-width: 540px;
-    }
-    @media (min-width: 768px) {
-      max-width: 720px;
-    }
-    @media (min-width: 992px) {
-      max-width: 960px;
-    }
-    @media (min-width: 1200px) {
-      max-width: 1140px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
   }
 
   .navbar-header {
     display: flex;
     align-items: center;
-    float: left;
-    justify-content: center;
-    height: 50px;
-    
-    @media (max-width: 768px) {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-direction: row-reverse;
-    }
+    flex-shrink: 0;
 
     .navbar-toggler {
-      cursor: pointer;
-      border: none;
       display: none;
-      outline: none;
-
-      @media (max-width: 768px) { display: block }
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      margin-right: 15px;
 
       span {
-        height: 2px;
-        width: 22px;
-        background-color: lighten($text-dark, 35%);
         display: block;
+        width: 28px;
+        height: 3px;
+        background: $accent-gold;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+        border-radius: 2px;
       }
-      span:not(:last-child) {
-        margin-bottom: 0.2rem;
+
+      &:hover span {
+        background: $accent-gold-light;
       }
     }
 
-    > a {
-      font-weight: 500;
-      color: $text-dark;
+    .logo {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      .logo-image {
+        height: 50px;
+        width: auto;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      .logo-text {
+        font-size: 22px;
+        font-weight: 700;
+        color: $text-light;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+
+        .logo-accent {
+          color: $accent-gold;
+        }
+      }
     }
   }
 
   .navbar-menu {
+    flex: 1;
     display: flex;
-    align-items: center;
-    flex-basis: auto;
-    flex-grow: 1;
     justify-content: center;
-    float: left;
-
-    @media (max-width: 768px) {
-      display: none;
-      text-align: center;
-    }
- 
-    &.active {
-      display: flex !important;
-    }
 
     .navbar-nav {
-      margin-left: auto;
-      flex-direction: row;
       display: flex;
-      padding-left: 0;
-      margin-bottom: 0;
       list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 15px;
+      flex-direction: row;
+      align-items: center;
 
-      @media (max-width: 768px) {
-        width: 100%;
-        display: block;
-        border-top: 1px solid #EEE;
-        margin-top: 1rem;
-      }
+      li {
+        position: relative;
 
-      > li {
-        > a {
-          color: $text-dark;
+        a {
+          display: block;
+          padding: 10px 20px;
+          color: $text-light;
           text-decoration: none;
-          display: inline-block;
-          padding: $navbar-link-padding-y $navbar-link-padding-x;
-          &:hover {
-            color: $navbar-link-hover;
-          }
-          @media (max-width: 768px) {
-            border-bottom: 1px solid $border-color;
-          }
-        }
-        &.active {
-          a {
-            color: $base-color;
-          }
-        }
-      }
-
-      .navbar-dropdown {
-        .dropdown {
-          list-style: none;
-          position: absolute;
-          top: 150%;
-          left: 0;
-          background-color: #fff;
-          padding-top: $navbar-dropdown-padding-y;
-          padding-bottom: $navbar-dropdown-padding-y;
-          min-width: 160px;
-          width: auto;
+          font-weight: 500;
+          font-size: 13px;
+          text-transform: uppercase;
+          letter-spacing: 0.8px;
+          transition: all 0.3s ease;
+          border-radius: 4px;
+          font-family: 'Montserrat', sans-serif;
+          position: relative;
           white-space: nowrap;
-          box-shadow: $navbar-dropdown-shadow;
-          z-index: 99999;
-          border-radius: $navbar-dropdown-radius;
-          display: none;
-          @media (max-width: 768px) {
-            position: relative;
-            box-shadow: none;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: $accent-gold;
+            transition: width 0.3s ease;
           }
-          li {
-            a {
-              color: $text-dark;
-              padding: $navbar-dropdown-item-padding-y
-                       $navbar-dropdown-item-padding-x;
-              display: block;
+
+          &:hover {
+            color: $accent-gold;
+            background: transparent;
+
+            &::after {
+              width: 50%;
             }
           }
-          &.show {
-            display: block !important;
+        }
+
+        &.active a {
+          color: $accent-gold;
+          background: transparent;
+
+          &::after {
+            width: 50%;
           }
         }
-      }
-
-      .dropdown > .separator {
-        height: 1px;
-        width: 100%;
-        margin: {
-          top: $navbar-dropdown-separator-margin-y;
-          bottom: $navbar-dropdown-separator-margin-y;
-        };
-        background-color: $navbar-dropdown-separator-color;
       }
     }
   }
 
-  .navbar-dropdown {
-    position: relative;
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    .order-btn {
+      padding: 10px 25px;
+      font-size: 12px;
+      white-space: nowrap;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+
+      i {
+        margin-right: 6px;
+        font-size: 11px;
+      }
+    }
   }
 }
 
+// Mobile Responsive
+@media (max-width: 768px) {
+  .top-bar {
+    .top-bar-left .top-text {
+      font-size: 10px;
+    }
 
-// Custom
-.navbar .navbar-header > a span {
-  color: $base-color;
+    .top-bar-right .phone-number {
+      font-size: 12px;
+    }
+  }
+
+  .navbar {
+    .container {
+      flex-wrap: wrap;
+    }
+
+    .navbar-header {
+      .navbar-toggler {
+        display: block;
+      }
+
+      .logo .logo-image {
+        height: 40px;
+      }
+    }
+
+    .navbar-menu {
+      display: none;
+      width: 100%;
+      order: 3;
+      margin-top: 20px;
+
+      &.active {
+        display: block;
+      }
+
+      .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+
+        li a {
+          padding: 15px 20px;
+          border-bottom: 1px solid $border-dark;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .navbar-actions {
+      display: none;
+    }
+  }
 }
-.navbar .navbar-header h4 {
-  font-weight: 500;
-  font-size: 1.25rem;
-  @media (max-width: 768px) {
-    font-size: 1.05rem;
+
+// Top Bar Responsive
+@media (max-width: 768px) {
+  .top-bar {
+    .container {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
   }
 }

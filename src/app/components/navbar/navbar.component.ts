@@ -7,13 +7,12 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  menuOpen = false;
 
   navLinks = [
     { url: '/', label: 'Anasayfa'},
     { url: '/about', label: 'Hakkımızda'},
     { url: '/project', label: 'Projeler'},
-    { url: '/services', label: 'Hizmetler'},
-    { url: '/photos', label: 'Galeri'},
     { url: '/contact', label: 'İletişim'},
   ];
 
@@ -23,8 +22,17 @@ export class NavbarComponent {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.updateActiveLinks();
+        this.closeMenu();
       }
     });
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
   }
 
   onRouterLinkActive(isActive: boolean, link: string) {

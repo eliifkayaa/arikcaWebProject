@@ -1,17 +1,40 @@
+<div class="projects-section">
+    <div class="section-header">
+        <h2>Tamamlanan Projelerimiz</h2>
+        <p>Kaliteli ve güvenilir inşaat hizmetlerimizle tamamladığımız projeler</p>
+    </div>
 
-    <h1>Projelerimiz</h1>
-    <div class="card-container">
+    <div class="projects-container">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                @for (service of services; track $index) {
-                <a class="swiper-slide card" routerLink="/project">
-                    <div class="card--display">
-                        <img [src]="service.icon" width="200px" height="200px" alt="Resim">
-                        <h5>{{service.title}}</h5>
-                    </div>
-                </a>
+                @for (project of projects; track $index) {
+                <div class="swiper-slide">
+                    <a class="project-card" routerLink="/project">
+                        <div class="project-image">
+                            <img [src]="project.icon" [alt]="project.title">
+                            <div class="project-overlay">
+                                <div class="project-year">{{project.year}}</div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>{{project.title}}</h3>
+                            <p class="project-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                {{project.location}}
+                            </p>
+                        </div>
+                    </a>
+                </div>
                 }
             </div>
             <div class="swiper-pagination"></div>
         </div>
     </div>
+
+    <div class="view-all-btn">
+        <button class="theme-btn-s2" routerLink="/project">
+            Tüm Projeleri Görüntüle
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HomeBannerComponent } from './components/home/home-components/home-banner/home-banner.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -36,11 +38,13 @@ import { HomeBannerComponent } from './components/home/home-components/home-bann
     CorporateComponent,
     HomeServicesComponent,
     HomeProjectsComponent,
-    HomeBannerComponent
+    HomeBannerComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     // RouterModule.forRoot("")
     MatButtonModule,
     MatCardModule

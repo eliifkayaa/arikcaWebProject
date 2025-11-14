@@ -1,5 +1,81 @@
-
 <app-navbar></app-navbar>
-<span>İçerik buraya gelecek</span>
-<br><br><br><br><br><br><br><br><br><br><br>
+
+<!-- Hero Section -->
+<section class="projects-hero">
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge">PROJELERİMİZ</span>
+      <h1>Tamamlanan <span class="highlight">Projelerimiz</span></h1>
+      <p>Kalite ve güvenle tamamladığımız projeler</p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Content -->
+<section class="projects-content">
+  <div class="container">
+    <!-- Filter Section -->
+    <div class="filter-section">
+      <div class="filter-buttons">
+        <button
+          *ngFor="let category of categories"
+          [class.active]="selectedCategory === category.id"
+          (click)="selectCategory(category.id)"
+          class="filter-btn">
+          {{ category.label }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid">
+      <div class="project-card" *ngFor="let project of filteredProjects">
+        <div class="project-image">
+          <img [src]="project.image" [alt]="project.title">
+          <div class="project-overlay">
+            <div class="project-year">{{ project.year }}</div>
+          </div>
+          <div class="project-hover">
+            <button class="view-btn">
+              <i class="fas fa-search-plus"></i>
+              Detayları Gör
+            </button>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>{{ project.title }}</h3>
+          <p class="project-location">
+            <i class="fas fa-map-marker-alt"></i>
+            {{ project.location }}
+          </p>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="project-meta">
+            <span class="meta-item">
+              <i class="fas fa-calendar"></i>
+              {{ project.year }}
+            </span>
+            <span class="meta-item status-completed">
+              <i class="fas fa-check-circle"></i>
+              Tamamlandı
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <div class="cta-content">
+        <h2>Hayalinizdeki Projeyi Birlikte Gerçekleştirelim</h2>
+        <p>Profesyonel ekibimizle sizin için en uygun çözümü üretelim</p>
+        <button class="theme-btn-s2" routerLink="/contact">
+          <i class="fas fa-phone"></i>
+          Teklif Alın
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <app-footer></app-footer>

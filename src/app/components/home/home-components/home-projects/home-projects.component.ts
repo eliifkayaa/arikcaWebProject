@@ -35,54 +35,42 @@ export class HomeProjectsComponent implements AfterViewInit {
     }
   }
 
-  services = [
+  projects = [
     {
       icon: '/assets/proje5.jpeg',
-      title: 'İrem Apartmanı'
+      title: 'İrem Park Apt.',
+      location: 'Kahramanmaraş',
+      year: '2020'
     },
     {
       icon: '/assets/proje6.jpg',
-      title: 'İrem Residence'
+      title: 'Mevsim Sitesi',
+      location: 'Kahramanmaraş',
+      year: '2019'
     },
     {
       icon: '/assets/harman.jpeg',
-      title: 'İrem Apartmanı'
-    },
-    {
-      icon: '/assets/1.png',
-      title: 'İrem Residence'
-    },
-    {
-      icon: '/assets/2.jpg',
-      title: 'İrem Apartmanı'
-    },
-    {
-      icon: '/assets/1.png',
-      title: 'Arıkca Residence'
-    },
-    {
-      icon: '/assets/3.jpg',
-      title: 'İrem Apartmanı'
+      title: 'Fatih Apt.',
+      location: 'Kahramanmaraş',
+      year: '2021'
     },
     {
       icon: '/assets/proje2.jpg',
-      title: 'Arıkca Residence'
+      title: 'Maraşhan Sitesi',
+      location: 'Kahramanmaraş',
+      year: '2018'
     },
     {
-      icon: '/assets/proje5.jpeg',
-      title: 'İrem Apartmanı'
+      icon: '/assets/3.jpg',
+      title: 'Karamanlı Apt.',
+      location: 'Kahramanmaraş',
+      year: '2022'
     },
     {
-      icon: '/assets/proje6.jpg',
-      title: 'İrem Residence'
-    },
-    {
-      icon: '/assets/harman.jpeg',
-      title: 'İrem Apartmanı'
-    },
-    {
-      icon: '/assets/1.png',
-      title: 'İrem Residence'
+      icon: '/assets/0.jpg',
+      title: 'İnci Sitesi B Blok',
+      location: 'Kahramanmaraş',
+      year: '2023'
     }
   ]
 }
